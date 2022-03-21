@@ -25,7 +25,10 @@ SECRET_KEY = 'django-insecure-$+!w=arb6-yd9a41c1fi=*j^5uajr9nrb+nm)4715@ivt@fu-@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1']
+
+LOGIN_URL = 'sign/login/'
+LOGIN_REDIRECT_URL = '/'
 
 
 # Application definition
@@ -41,6 +44,8 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'django.contrib.flatpages',
     'django_filters',
+    'sign',
+    'protect',
 ]
 
 MIDDLEWARE = [
